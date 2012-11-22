@@ -1,0 +1,19 @@
+# interpret (wiki).phtml as php
+<IfModule php5_module>
+        AddType application/x-httpd-php .php .php5 .phtml
+</IfModule>
+
+# rewrite all requests to core codebase
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{REQUEST_URI} !^/mediawiki/mediawiki/.*$
+  RewriteRule (.*) /mediawiki/mediawiki/$1 [L]
+</IfModule>
+
+# funky mobile emulation stuff
+<IfModule mod_setenvif.c>
+  SetEnvIf Host ^(html|capable|webkit|ie|android|iphone|iphone2|native_iphone|palm_pre|kindle|kindle2|lackberry|blackberry-lt5|netfront|wap2|psp|ps3|wii|operamini|operamobile|nokia|wml)\. MOBILE=$1
+  RequestHeader add X-Device "%{MOBILE}e" env=MOBILE
+</IfModule>

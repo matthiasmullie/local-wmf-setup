@@ -1,0 +1,9 @@
+<?php
+
+// set local cache config; other options could be:
+// CACHE_NONE, CACHE_DB, CACHE_DBA, CACHE_ANYTHING, CACHE_ACCEL, CACHE_MEMCACHED,
+// 'apc', 'xcache', 'wincache', 'memcached-php', 'memcached-pecl', 'hash'
+$wgMainCacheType = [CACHETYPE];
+$wgMemCachedServers = array(
+	0 => '[CACHESERVER]',
+);

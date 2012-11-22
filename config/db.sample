@@ -1,0 +1,12 @@
+<?php
+
+// database details
+$wgDBservers = array( array(
+	'host' => '[DBHOST]',
+	'user' => '[DBUSER]',
+	'password' => '[DBPASS]',
+	'dbname' => '[DBNAME]',
+	'type' => '[DBTYPE]',
+	'load' => 1,
+	'flags' => DBO_DEBUG | DBO_DEFAULT
+) );

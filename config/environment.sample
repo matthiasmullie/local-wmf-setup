@@ -1,0 +1,7 @@
+<?php
+
+// cluster environment to emulate
+$cluster = '[ENVCLUSTER]'; // 'labs', 'production'
+
+// wiki config to emulate
+$wiki = '[ENVWIKI]'; // anything in *.dblist, e.g. 'enwiki'
