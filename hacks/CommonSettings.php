@@ -59,6 +59,9 @@ $defaults = array(
 	'wgMessageCacheType' => $wgMessageCacheType,
 );
 
+// CommonSettings.php will set it's own include_path
+$includePath = get_include_path();
+
 // init some vars to allow CommonSettings.php to be included
 $wmfSwiftConfig['authUrl'] = null;
 $wmfSwiftConfig['user'] = null;
@@ -75,3 +78,6 @@ require_once __DIR__.'/../mediawiki/wmf-config/CommonSettings.php';
 
 // undo harm done in CommmonSettings.php by reinstating default settings
 extract( $defaults );
+
+// reset existing include path
+set_include_path( get_include_path() . PATH_SEPARATOR . $includePath );
