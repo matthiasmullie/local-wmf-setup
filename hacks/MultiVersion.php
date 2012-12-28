@@ -1,5 +1,8 @@
 <?php
 
+require_once( dirname( __FILE__ ) . '/../mediawiki/multiversion/defines.php' );
+require_once( dirname( __FILE__ ) . '/../mediawiki/multiversion/MWRealm.php' );
+
 /**
  * wmf-config/CommonSettings.php will expect a MWMultiVersion setup;
  * this will emulate that functionality for the sake of CommonSettings.php,
