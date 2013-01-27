@@ -67,18 +67,21 @@ $wmfSwiftConfig['authUrl'] = null;
 $wmfSwiftConfig['user'] = null;
 $wmfSwiftConfig['key'] = null;
 $wmfSwiftConfig['tempUrlKey'] = null;
-$wmfCephRgwConfig['authUrl'] = null;
-$wmfCephRgwConfig['user'] = null;
-$wmfCephRgwConfig['key'] = null;
-$wmfCephRgwConfig['tempUrlKey'] = null;
-$wmfCephRgwConfig['S3AccessKey'] = null;
-$wmfCephRgwConfig['S3SecretKey'] = null;
 $wmgCaptchaSecret = null;
 $wmgMFRemotePostFeedbackUsername = null;
 $wmgMFRemotePostFeedbackPassword = null;
 $_SERVER['HTTPS'] = '';
 $_SERVER['HTTP_X_FORWARDED_FOR'] = '';
 $_REQUEST['wpSave'] = '';
+
+// filebackend.php
+$wmfCephRgwConfig['authUrl'] = null;
+$wmfCephRgwConfig['user'] = null;
+$wmfCephRgwConfig['key'] = null;
+$wmfCephRgwConfig['tempUrlKey'] = null;
+$wmfCephRgwConfig['S3AccessKey'] = null;
+$wmfCephRgwConfig['S3SecretKey'] = null;
+$urlprotocol = '';
 
 require_once __DIR__.'/../mediawiki/wmf-config/CommonSettings.php';
 
