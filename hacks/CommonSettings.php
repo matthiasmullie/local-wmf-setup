@@ -51,6 +51,7 @@ $defaults = array(
 	'wgDebugLogFile' => $wgDebugLogFile,
 	'wgFileBackends' => $wgFileBackends,
 	'wgForeignFileRepos' => $wgForeignFileRepos,
+	'wgLocalFileRepo' => $wgLocalFileRepo,
 
 	// we just defined this ourselves (Config.php) and don't want it to be overwritten
 	'wgDBservers' => $wgDBservers,
