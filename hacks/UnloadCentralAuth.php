@@ -55,7 +55,7 @@ foreach ( $wgHooks as $i => $hook ) {
 			// disable GlobalUsage
 			strpos( $callback, 'GlobalUsageHooks' ) !== false
 		) {
-			unset($wgHooks[$i][$j]);
+			unset( $wgHooks[$i][$j] );
 		}
 	}
 }

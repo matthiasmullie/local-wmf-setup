@@ -9,6 +9,7 @@ require_once 'Cache.php';
 require_once 'MultiVersion.php';
 require_once 'CommonSettings.php';
 require_once 'UnloadCentralAuth.php';
+require_once 'UnloadWikiData.php';
 require_once 'Mobile.php';
 require_once 'RandomFixes.php';
 
@@ -23,6 +24,3 @@ $wgUpgradeKey = "5d3d2659e21e53ea";
 // show exceptions & SQL
 $wgShowExceptionDetails = true;
 $wgShowSQLErrors = true;
-
-// log clicktracking stuff to db
-$wgClickTrackingDatabase = true;
