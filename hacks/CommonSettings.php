@@ -53,11 +53,15 @@ $defaults = array(
 	'wgForeignFileRepos' => $wgForeignFileRepos,
 	'wgLocalFileRepo' => $wgLocalFileRepo,
 
-	// we just defined this ourselves (Config.php) and don't want it to be overwritten
+	// cluster servers won't be accessible anyway, and we will/might overwrite these ourselves
 	'wgDBservers' => $wgDBservers,
+	'wgExternalServers' => $wgExternalServers,
 
 	// is not currently being messed up, but you never know...
 	'wgMessageCacheType' => $wgMessageCacheType,
+
+	// jobqueue-*.php
+	'wgJobTypeConf' => $wgJobTypeConf, // I have no redis
 );
 
 // CommonSettings.php will set it's own include_path
@@ -83,6 +87,9 @@ $wmfCephRgwConfig['tempUrlKey'] = null;
 $wmfCephRgwConfig['S3AccessKey'] = null;
 $wmfCephRgwConfig['S3SecretKey'] = null;
 $urlprotocol = '';
+
+// I have no redis
+$wmgRedisPassword = '';
 
 require_once __DIR__.'/../mediawiki/wmf-config/CommonSettings.php';
 
