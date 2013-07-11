@@ -1,5 +1,8 @@
 <?php
 
+// assume DB is up-to-date
+$wgOldChangeTagsIndex = false;
+
 // flaggedrevs deprecated these vars
 if ( isset( $wgFlaggedRevTags ) ) {
 	$wgFlaggedRevsTags = $wgFlaggedRevTags;

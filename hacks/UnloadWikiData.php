@@ -2,7 +2,7 @@
 
 /**
  * wmf-config will setup Wikidata, which we can't run
- * locally; this will disable them completely
+ * locally; this will disable it completely
  */
 $wmgUseWikibaseRepo = false;
 $wmgUseWikibaseClient = false;
