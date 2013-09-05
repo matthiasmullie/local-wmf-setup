@@ -18,12 +18,12 @@ I'll assume that your local webserver is properly configured, e.g. mediawiki.dev
     * **db name?** The name of the (empty) database
     * **db username?** Your database username
     * **db password?** Your database password
-    * **Similarly, shard DB details** Some extensions (can) have their data live on a shard; can add different database details to emulate that
+    * **shard db details**: Some extensions (can) have their data live on a seperate shard (or just use same core db)
     * **cache type?** The type of cache you'd like to use (if any); this will be also be used by $wgMessageCacheType, $wgParserCacheType, $wgSessionCacheType, $wgLanguageConverterCacheType
         * Available cache types: CACHE_NONE, CACHE_DB, CACHE_DBA, CACHE_ANYTHING, CACHE_ACCEL, CACHE_MEMCACHED, 'apc', 'xcache', 'wincache', 'memcached-php', 'memcached-pecl', 'hash'
         * In case you selected memcached, you'll be asked for you **cache server?** (in host:port format)
     * **cluster to emulate?** Whether you want to emulate labs or production
-    * **parsoid url?** URL to reach your Parsoid setup (or nothing if you don't have it, in which case VisualEditor won't work), see: https://www.mediawiki.org/wiki/Parsoid#Parsoid_setup
+    * **parsoid url?** URL to reach your [Parsoid setup](https://www.mediawiki.org/wiki/Parsoid#Parsoid_setup) (or nothing if you don't have it, in which case VisualEditor won't work)
     * **parsoid prefix?** Your setup's parsoid prefix
     * **wiki to emulate?** Which wiki to emulate (e.g. enwiki)
     * **wiki admin username?** The admin username for your wiki install (password will be empty)
