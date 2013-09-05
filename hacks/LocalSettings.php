@@ -5,6 +5,7 @@
 require_once __DIR__.'/../config/environment.php';
 require_once __DIR__.'/../config/db.php';
 require_once __DIR__.'/../config/cache.php';
+require_once __DIR__.'/../config/parsoid.php';
 require_once 'Cache.php';
 require_once 'MultiVersion.php';
 require_once 'CommonSettings.php';
@@ -28,3 +29,6 @@ $wgShowSQLErrors = true;
 
 // show debug toolbar
 $wgDebugToolbar = true;
+
+// HTML emails are ok
+$wgAllowHTMLEmail = true;

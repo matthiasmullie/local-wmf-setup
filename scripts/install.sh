@@ -12,6 +12,7 @@ esac
 source $DIR/db.sh
 source $DIR/cache.sh
 source $DIR/environment.sh
+source $DIR/parsoid.sh
 
 # ask for admin username
 read -p "wiki admin username? " ADMINUSER
