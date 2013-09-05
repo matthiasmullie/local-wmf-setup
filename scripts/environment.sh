@@ -13,3 +13,6 @@ fi
 
 # write config file
 sed -e "s/\[ENVWIKI\]/$ENVWIKI/g" -e "s/\[ENVCLUSTER\]/$ENVCLUSTER/g" $DIR/../config/environment.sample > $DIR/../config/environment.php
+
+# clear config cache file
+rm /tmp/mw-cache-local/conf-$ENVWIKI
