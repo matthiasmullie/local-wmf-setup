@@ -18,10 +18,13 @@ I'll assume that your local webserver is properly configured, e.g. mediawiki.dev
     * **db name?** The name of the (empty) database
     * **db username?** Your database username
     * **db password?** Your database password
+    * **Similarly, shard DB details** Some extensions (can) have their data live on a shard; can add different database details to emulate that
     * **cache type?** The type of cache you'd like to use (if any); this will be also be used by $wgMessageCacheType, $wgParserCacheType, $wgSessionCacheType, $wgLanguageConverterCacheType
         * Available cache types: CACHE_NONE, CACHE_DB, CACHE_DBA, CACHE_ANYTHING, CACHE_ACCEL, CACHE_MEMCACHED, 'apc', 'xcache', 'wincache', 'memcached-php', 'memcached-pecl', 'hash'
         * In case you selected memcached, you'll be asked for you **cache server?** (in host:port format)
     * **cluster to emulate?** Whether you want to emulate labs or production
+    * **parsoid url?** URL to reach your Parsoid setup (or nothing if you don't have it, in which case VisualEditor won't work), see: https://www.mediawiki.org/wiki/Parsoid#Parsoid_setup
+    * **parsoid prefix?** Your setup's parsoid prefix
     * **wiki to emulate?** Which wiki to emulate (e.g. enwiki)
     * **wiki admin username?** The admin username for your wiki install (password will be empty)
 * Script should automatically clone wmf-config, mediawiki core & mediawiki extensions
@@ -29,6 +32,7 @@ I'll assume that your local webserver is properly configured, e.g. mediawiki.dev
     * $ php ~/mediawiki/scripts/db.sh : change db credentials
     * $ php ~/mediawiki/scripts/cache.sh : change cache config
     * $ php ~/mediawiki/scripts/environment.sh : switch wiki environment
+    * $ php ~/mediawiki/scripts/parsoid.sh : change parsoid setup
     * $ php ~/mediawiki/scripts/update.sh : update codebases (hint: cronjob)
 
 After running the setup (and if you didn't encounter any error), you should be able to surf to whatever vhost you configured (e.g. mediawiki.dev) and find a local copy of the
