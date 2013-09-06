@@ -30,12 +30,6 @@ git clone "$path/operations/mediawiki-config" $DIR/../mediawiki
 echo "Cloning mediawiki core..."
 git clone "$path/mediawiki/core" $DIR/../mediawiki/mediawiki
 
-# setup mediawiki extensions
-echo "Cloning mediawiki extensions..."
-git clone --recursive "$path/mediawiki/extensions" $DIR/../mediawiki/mediawiki/extensions/extensions
-find mediawiki/mediawiki/extensions/extensions -maxdepth 1 -exec mv {} mediawiki/mediawiki/extensions \;
-rm -r mediawiki/mediawiki/extensions/extensions
-
 # install db
 php $DIR/../mediawiki/mediawiki/maintenance/install.php test $ADMINUSER --pass=$ADMINPASS --dbuser=$DBUSER --dbpass=$DBPASS --dbname=$DBNAME --dbserver=$DBHOST --dbtype=$DBTYPE --confpath=$DIR/../mediawiki/mediawiki
 rm $DIR/../mediawiki/mediawiki/LocalSettings.php
@@ -48,4 +42,4 @@ ln -s $DIR/../hacks/Stub.php $DIR/../mediawiki/wmf-config/ExtensionMessages-loca
 ln -s $DIR/../hacks/Stub.php $DIR/../mediawiki/wmf-config/mwblocker.log
 
 # update setup
-$DIR/update.sh
+source $DIR/update.sh

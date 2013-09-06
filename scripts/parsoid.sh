@@ -10,3 +10,5 @@ fi
 
 # write config file
 sed -e "s/\[PARSOIDURL\]/$(echo $PARSOIDURL | sed -e 's/[\/&]/\\&/g')/g" -e "s/\[PARSOIDPREFIX\]/$PARSOIDPREFIX/g" $DIR/../config/parsoid.sample > $DIR/../config/parsoid.php
+
+echo "Only Parsoid's MW configuration has been saved. You'll have to install Parsoid yourself. See https://www.mediawiki.org/wiki/Parsoid"
