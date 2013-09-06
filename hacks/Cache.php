@@ -9,7 +9,7 @@ $wgSessionCacheType = CACHE_ANYTHING;
 $wgLanguageConverterCacheType = CACHE_ANYTHING;
 
 // if igbinary is not installed, use default php serializer
-if ( !Memcached::HAVE_IGBINARY ) {
+if ( !class_exists( 'Memcached' ) || !Memcached::HAVE_IGBINARY ) {
 	$wgObjectCaches['memcached-pecl']['serializer'] = 'php';
 }
 
