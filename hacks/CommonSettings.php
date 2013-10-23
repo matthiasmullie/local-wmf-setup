@@ -74,6 +74,7 @@ $wmfSwiftConfig['authUrl'] = null;
 $wmfSwiftConfig['user'] = null;
 $wmfSwiftConfig['key'] = null;
 $wmfSwiftConfig['tempUrlKey'] = null;
+$wmfSwiftEqiadConfig = $wmfSwiftConfig;
 $wmgCaptchaSecret = null;
 $wmgMFRemotePostFeedbackUsername = null;
 $wmgMFRemotePostFeedbackPassword = null;
