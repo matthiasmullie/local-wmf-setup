@@ -27,3 +27,15 @@ $autoloader = function() {
 	}
 };
 spl_autoload_register( $autoloader );
+
+
+// we don't want the workaround for bug 54847 here
+$bug54847 = function ( $user ) {
+	global $wgMemc;
+	$wgMemc->set( 'centralauth:reset-pass:' . md5( $user->getName() ), 'no' );
+	return true;
+};
+array_unshift( $wgHooks['UserLoadAfterLoadFromSession'], $bug54847 );
+array_unshift( $wgHooks['UserLoadFromSession'], $bug54847 );
+array_unshift( $wgHooks['AbortLogin'], $bug54847 );
+array_unshift( $wgHooks['AbortChangePassword'], $bug54847 );
