@@ -64,6 +64,7 @@ $defaults = array(
 
 	// jobqueue-*.php
 	'wgJobTypeConf' => $wgJobTypeConf, // I have no redis
+	'wgJobQueueAggregator' => $wgJobQueueAggregator, // I have no redis
 );
 
 // CommonSettings.php will set it's own include_path
