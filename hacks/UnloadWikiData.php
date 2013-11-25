@@ -6,7 +6,7 @@
  */
 $wmgUseWikibaseRepo = false;
 $wmgUseWikibaseClient = false;
-$wgWBSettings['repoDatabase'] = null;
+$wgWBSettings['repoDatabase'] = false;
 $wgWBSettings['changesDatabase'] = null;
 $wgWBSettings['localClientDatabases'] = null;
 
