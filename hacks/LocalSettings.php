@@ -32,3 +32,11 @@ $wgDebugToolbar = true;
 
 // HTML emails are ok
 $wgAllowHTMLEmail = true;
+
+// Just save all data on core cluster
+$wgArticleFeedbackv5Cluster = false;
+$wgEchoCluster = false;
+$wgFlowCluster = false;
+
+// Allow custom LocalSettings.php config
+include __DIR__.'/../config/LocalSettings.php';
