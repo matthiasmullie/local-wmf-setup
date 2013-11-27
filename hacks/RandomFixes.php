@@ -38,4 +38,6 @@ $bug54847 = function ( $user ) {
 array_unshift( $wgHooks['UserLoadAfterLoadFromSession'], $bug54847 );
 array_unshift( $wgHooks['UserLoadFromSession'], $bug54847 );
 array_unshift( $wgHooks['AbortLogin'], $bug54847 );
-array_unshift( $wgHooks['AbortChangePassword'], $bug54847 );
+if ( isset( $wgHooks['AbortChangePassword'] ) ) {
+	array_unshift( $wgHooks['AbortChangePassword'], $bug54847 );
+}
