@@ -41,3 +41,6 @@ array_unshift( $wgHooks['AbortLogin'], $bug54847 );
 if ( isset( $wgHooks['AbortChangePassword'] ) ) {
 	array_unshift( $wgHooks['AbortChangePassword'], $bug54847 );
 }
+
+// WMF's mobile template likely doesn't apply to local setup
+$wgMobileUrlTemplate = '';
