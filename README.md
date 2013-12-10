@@ -38,9 +38,26 @@ I'll assume that your local webserver is properly configured, e.g. mediawiki.dev
 After running the setup (and if you didn't encounter any error), you should be able to surf to whatever vhost you configured (e.g. mediawiki.dev) and find a local copy of the
 
 ## Differences?
+hacks/LocalSettings.php will be run first, which will work around some functionality that would require a more elaborate setup.
+These are the most important changes. Custom changes can be added to config/LocalSettings.php, which will be loaded after wnf-config's CommonSettings.php has been read.
 
 ### CentralAuth
 CentralAuth can not be accessed from your local machine, so will be unloaded.
 
+### WikiData
+WikiData will not be available from your local machine, so will be unloaded.
+
+### VisualEditor
+Visual Editor will, by default, not be loaded because it requires Parsoid. If you are running Parsoid, manually add your config ($wgVisualEditorParsoidURL) in LocalSettings.php & Visual Editor will no longer be disabled.
+
 ### Captcha
 FancyCaptcha requires images in $wgCaptchaDirectory, so this setup will use SimpleCaptcha.
+
+### Test
+Exceptions, errors & debug toolbar will be displayed.
+
+### Cluster
+ArticleFeedbackv5, Echo & Flow can write data to a separate database; this is disabled by default.
+
+## Donate?
+Help keep Wikipedia free and consider [donating](https://donate.wikimedia.org/wiki/Special:FundraiserLandingPage).
