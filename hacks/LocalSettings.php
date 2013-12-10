@@ -12,7 +12,6 @@ require_once 'CommonSettings.php';
 require_once 'UnloadCentralAuth.php';
 require_once 'UnloadVisualEditor.php';
 require_once 'UnloadWikiData.php';
-require_once 'Mobile.php';
 require_once 'RandomFixes.php';
 
 // FancyCaptcha requires images in $wgCaptchaDirectory, which I don't have; let's just move to SimpleCaptcha for now

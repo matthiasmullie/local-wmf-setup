@@ -37,13 +37,7 @@ I'll assume that your local webserver is properly configured, e.g. mediawiki.dev
 
 After running the setup (and if you didn't encounter any error), you should be able to surf to whatever vhost you configured (e.g. mediawiki.dev) and find a local copy of the
 
-## Interesting
-
-### Mobile
-This test-setup is built around the assumption that {device}.{uri} (e.g. iphone.mediawiki.dev) should display the mobile view for the given {device}, while {uri} should not.
-
-These devices are currently available:
-html, capable, webkit, ie, android, iphone, iphone2, native_iphone, palm_pre, kindle, kindle2, blackberry, blackberry-lt5, netfront, wap2, psp, ps3, wii, operamini, operamobile, nokia, wml
+## Differences?
 
 ### CentralAuth
 CentralAuth can not be accessed from your local machine, so will be unloaded.
