@@ -25,6 +25,7 @@ $wgUpgradeKey = "5d3d2659e21e53ea";
 // show exceptions & SQL
 $wgShowExceptionDetails = true;
 $wgShowSQLErrors = true;
+$wgShowDBErrorBacktrace = true;
 
 // show debug toolbar
 $wgDebugToolbar = true;

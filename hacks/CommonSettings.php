@@ -42,6 +42,7 @@ $defaults = array(
 	'wgScript' => $wgScript,
 	'wgScriptExtension' => $wgScriptExtension,
 	'wgServer' => $wgServer,
+	'wgSecureLogin' => $wgSecureLogin,
 	'wgUseSquid' => $wgUseSquid,
 //	'wgArticlePath' => $wgArticlePath, // .htaccess should have enabled .phtml parsing, so this is not necessary
 	'wgEmergencyContact' => $wgEmergencyContact,
