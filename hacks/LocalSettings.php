@@ -10,6 +10,7 @@ require_once 'Cache.php';
 require_once 'MultiVersion.php';
 require_once 'CommonSettings.php';
 require_once 'UnloadCentralAuth.php';
+require_once 'UnloadOAuth.php';
 require_once 'UnloadVisualEditor.php';
 require_once 'UnloadWikiData.php';
 require_once 'RandomFixes.php';
