@@ -53,6 +53,7 @@ $defaults = array(
 	'wgFlowParsoidPrefix' => $wgParsoidPrefix,
 
 	// logging-wmflabs.php
+	'wgDebugLogGroups' => $wgDebugLogGroups,
 	'wgDebugLogFile' => $wgDebugLogFile,
 	'wgFileBackends' => $wgFileBackends,
 	'wgForeignFileRepos' => $wgForeignFileRepos,
