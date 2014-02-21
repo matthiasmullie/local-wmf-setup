@@ -1,6 +1,6 @@
 <?php
 
-if ( !$wgVisualEditorParsoidURL ) {
+if ( !$wgParsoidURL ) {
 	/**
 	 * wmf-config will setup VisualEditor, which needs Parsoid to run;
 	 * this will disable it completely.

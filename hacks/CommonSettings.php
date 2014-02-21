@@ -47,8 +47,10 @@ $defaults = array(
 //	'wgArticlePath' => $wgArticlePath, // .htaccess should have enabled .phtml parsing, so this is not necessary
 	'wgEmergencyContact' => $wgEmergencyContact,
 	'wgPasswordSender' => $wgPasswordSender,
-	'wgVisualEditorParsoidURL' => $wgVisualEditorParsoidURL,
-	'wgVisualEditorParsoidPrefix' => $wgVisualEditorParsoidPrefix,
+	'wgVisualEditorParsoidURL' => $wgParsoidURL,
+	'wgVisualEditorParsoidPrefix' => $wgParsoidPrefix,
+	'wgFlowParsoidURL' => $wgParsoidURL,
+	'wgFlowParsoidPrefix' => $wgParsoidPrefix,
 
 	// logging-wmflabs.php
 	'wgDebugLogFile' => $wgDebugLogFile,
