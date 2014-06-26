@@ -59,6 +59,9 @@ $defaults = array(
 	'wgForeignFileRepos' => $wgForeignFileRepos,
 	'wgLocalFileRepo' => $wgLocalFileRepo,
 
+	// uploads
+	'wgUploadDirectory' => $wgUploadDirectory,
+
 	// cluster servers won't be accessible anyway, and we will/might overwrite these ourselves
 	'wgDBservers' => $wgDBservers,
 	'wgExternalServers' => $wgExternalServers,
@@ -69,6 +72,7 @@ $defaults = array(
 	// jobqueue-*.php
 	'wgJobTypeConf' => $wgJobTypeConf, // I have no redis
 	'wgJobQueueAggregator' => $wgJobQueueAggregator, // I have no redis
+	'wgRCFeeds' => $wgRCFeeds,
 );
 
 // CommonSettings.php will set it's own include_path
@@ -98,6 +102,12 @@ $urlprotocol = '';
 
 // I have no redis
 $wmgRedisPassword = '';
+
+// undefined vars, not sure where they're supposed to come from
+$wmgZeroRatedMobileAccessApiUserName = '';
+$wmgZeroRatedMobileAccessApiPassword = '';
+$wmgZeroPortalApiUserName = '';
+$wmgZeroPortalApiPassword = '';
 
 require_once __DIR__.'/../mediawiki/wmf-config/CommonSettings.php';
 

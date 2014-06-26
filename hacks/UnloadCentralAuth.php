@@ -39,7 +39,8 @@ unset(
 	$wgSpecialPageGroups['GlobalGroupMembership'],
 	$wgSpecialPageGroups['GlobalGroupPermissions'],
 	$wgSpecialPageGroups['WikiSets'],
-	$wgSpecialPageGroups['GlobalUsers']
+	$wgSpecialPageGroups['GlobalUsers'],
+	$wgAPIListModules['globalallusers']
 );
 $wgApplyGlobalBlocks = false;
 $wgCentralAuthCookies = false;
